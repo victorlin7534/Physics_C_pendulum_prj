@@ -1,4 +1,4 @@
-L = g = ix = iy = x = y = t = d_x = d_y = start = placed = reset = None
+L = g = ix = iy = x = y = t = theta = v = phi = d_x = d_y = start = placed = reset = None
 trail = {}
         
 def draw():
@@ -25,7 +25,7 @@ def panel():
     background(255)
     fill(0)
     rect(0,800,799,999)
-    global L,g,d_x,d_y
+    global L,g,d_x,d_y,x,y,theta,phi
     if keyPressed:
         if key == 'w':   
             L += 0.1
@@ -61,6 +61,14 @@ def panel():
     text(d_x,400,850)
     text('d_y: ',500,850)
     text(d_y,550,850)
+    text('theta: ',75,900)
+    #text(theta,100,900)
+    text('phi: ',175,900)
+    #text(phi,200,900)
+    text('x: ',350,900)
+    text(x,400,900)
+    text('y: ',500,900)
+    text(y,550,900)
     popMatrix()
             
 def setup():
@@ -70,7 +78,7 @@ def setup():
     frameRate(100)
     L = 1
     g = 9.81
-    x = y = ix = iy = t = d_y = d_x = 0
+    x = y = ix = iy = t = d_y = d_x = theta = v = phi = 0
     start = placed = reset = False
     trail.clear()
     
@@ -84,7 +92,7 @@ def pendulum():
     t += 0.0005
     fill(0)
     ellipse(x,y,20,20)
-    line(400,400,x,y)s
+    line(400,400,x,y)
     trail[x] = y
     for x in trail:
         point(x,trail[x])
