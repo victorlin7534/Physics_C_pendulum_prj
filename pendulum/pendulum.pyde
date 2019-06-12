@@ -100,7 +100,7 @@ def setup():
     global L,g,ix,iy,t,d_x,d_y,start,placed,reset,x,y,theta,v,x_factor,y_factor, adjust_v
     size(800,1000)
     background(255)
-    frameRate(150)
+    frameRate(120)
     L = 1
     g = 9.81
     x = y = ix = iy = t = d_y = d_x = theta = v = 0
@@ -114,13 +114,13 @@ def pendulum():
     w_y = sqrt(g/L)*y_factor
     pushMatrix()
     translate(400,400)
-    x = (ix-400)*cos(w_x*t - d_x) + v*cos(theta*t)*t #make this make sense
-    y = (iy-400)*cos(w_y*t - d_y) + v*sin(theta*t)*t #make this make sense
-    t += 0.0005
+    x = (ix-400)*cos(w_x*t - d_x) + v*cos(theta)*sin(w_x*t) #if we set d_x or d_y, intial pos changes
+    y = (iy-400)*cos(w_y*t - d_y) + v*sin(theta)*sin(w_y*t) #confirm if vtrig(t)sin(w) is correct
+    t += 0.0025
     fill(0)
     ellipse(x,y,20,20)
     line(0,0,x,y)
-    trail[x] = y
+    trail[x] = y #if time, find efficient trail recorder
     for x in trail:
         point(x,trail[x])
     popMatrix()
@@ -151,8 +151,6 @@ def drawArrow(x,y,l,angle):
         line(l, 0, l + 8, 8)
         line(l, 0, l + 8, -8)
     popMatrix()
-        
-
         
     
     
