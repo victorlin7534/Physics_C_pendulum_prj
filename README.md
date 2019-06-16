@@ -5,37 +5,37 @@ Our project is a simulation of a sand pendulum oscillating across the xy plane. 
 
 ## Controls  
  Left click with mouse to place the starting location  (Location cannot be longer than length)  
- Press Enter to start the simulation  
- Press Space to clear the simulation    
+ Press <kbd>Enter</kbd> to start the simulation  
+ Press <kbd>Space</kbd> to clear the simulation    
    
  Variables that can be changed  
  - Gravity:   
- Q to increase  
- A to decrease  
+ <kbd>Q</kbd> to increase  
+ <kbd>A</kbd> to decrease  
  - Length:  
- W to increase  
- S to decrease  
+ <kbd>W</kbd> to increase  
+ <kbd>S</kbd> to decrease  
  - d_x or x phase shift:   
- E to increase  
- D to decrease  
+ <kbd>E</kbd> to increase  
+ <kbd>D</kbd> to decrease  
  - d_y or y phase shift:  
- R to increaase  
- D to decrease  
+ <kbd>R</kbd> to increaase  
+ <kbd>F</kbd> to decrease  
  - x_factor:  
- T to increase  
- G to decrease  
+ <kbd>T</kbd> to increase  
+ <kbd>G</kbd> to decrease  
  - y_factor:  
- Y to increase  
- H to decrease  
+ <kbd>Y</kbd> to increase  
+ <kbd>H</kbd> to decrease  
  - Dampening:  
- U to increase  
- J to decrease  
- - Speed:
- up_arrow key to increase  
- down_arrow key to decrease  
+ <kbd>U</kbd> to increase  
+ <kbd>J</kbd> to decrease  
+ - Speed:  
+ <kbd>&#8593;</kbd> to increase  
+ <kbd>&#8595;</kbd> to decrease  
  - Theta:  
- right_arrow key to increase  
- left_arrow key to decrease  
+ <kbd>&#8594;</kbd> to increase  
+ <kbd>&#8592;</kbd> to decrease  
  
  
  
